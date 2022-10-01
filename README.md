@@ -4,6 +4,5 @@
 
 Adding few JavaSript problems and their solutions if the file `JSProblemDocument.js` above.
 
-If want to checkout the website from where I got the problems. C
-heckout [here](https://javascript.onl/problems/).
+If want to checkout the website from where I got the problems. Checkout [here](https://javascript.onl/problems/).
 
