@@ -1,8 +1,6 @@
 /**
  * Solution 1
  *
- * Implement the solution in this function
- *
  * @param {number} n Output goes from 1 to n
  * @returns {(number|string)[]} An array containing all numbers and strings
  */
@@ -21,18 +19,28 @@
     }
     return finalList
 }
-// console.log("Solution 1")
+// PASSED
 // console.log(fizzbuzz(20))
 
 
 /**
  * Solution 2
  *
- * Implement the solution in this function
- *
  * @param {number} n Examine this number
  * @returns {boolean} True if n is prime and false otherwise
  */
  function isPrime (n) {
-
+    if (n <= 1) {
+        return false
+    }
+    let constraint = n/2
+    for (let i=2; i<=constraint; i++) {
+        if (n % i == 0) {
+            return false
+        }
+    }
+    return true
 }
+
+//TODO: (manage Time Complexity)
+// console.log(isPrime(961748927))
