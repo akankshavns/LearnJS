@@ -43,4 +43,17 @@
 
 > "One Hundred One Thousand Eighty One"
 
-#### Difficulty: Hard
+#### Difficulty: Easy
+# 4. Merge
+
+> Given two sorted arrays, merge them into a single sorted array. Please do not use the bult-in sort functions.
+
+## Sample Input/Output
+
+### Input
+
+> [1, 3, 6], [2, 4, 8, 34, 67]
+
+### Output
+
+> [1, 2, 3, 4, 6, 8]
