@@ -92,7 +92,7 @@
         return `${getNumberRaw(Number(part1)) + " Thousand " + getNumberRaw(Number(part2))}`.trim().replace(/\s{2,}/g, " ")
     }
 }
-//Passed
+//PASSED
 // console.log(numberToText(303008))
 
 /**
@@ -138,4 +138,45 @@
     }
     return mergedArr
 }
-console.log(merge([1, 3, 6, 8], [2, 3, 4, 7]))
+//Incomplete
+// console.log(merge([1, 3, 6, 8], [2, 3, 4, 7]))
+
+/**
+ * Solution 5
+ *
+ * @param {number} n The number of item in the sequence.
+ * @returns {string} The n-th number in the look-and-say seequence.
+ */
+ function lookAndSay (n) {
+    function something (n) {
+        let i = 0
+        n = `${n}`
+        let finalNum = ""
+        second:
+        while(i < n.length) {
+            let count = 1
+            third:
+            while (true) {
+                if (n[i] == n[count+i]) {
+                    count++
+                } else {
+                    finalNum += count + n[i]
+                    i = i + count
+                    break third
+                }
+            }
+
+        }
+        return finalNum
+    }
+    let itr = 2
+    let initiator = "1"
+    while (itr <= n) {
+        let finalNum = something(initiator)
+        initiator = finalNum
+        itr ++
+    }
+    return initiator
+}
+//PASSED
+// console.log(lookAndSay(2))
