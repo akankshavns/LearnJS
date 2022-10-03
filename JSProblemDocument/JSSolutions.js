@@ -179,3 +179,49 @@
 }
 //PASSED
 // console.log(lookAndSay(2))
+
+/**
+ * Solution 6
+ *
+ * @param {number} n The amount of money in cents.
+ * @returns {number} The minimum number of coins needed.
+ */
+ function changeCoins (n) {
+    let finalCount = 0
+    let finalSum = 0
+    let changes = [1, 2, 5, 10, 25]
+    let coinCount = 0
+    for (coin in changes) {
+        if (changes[coin] == n) {
+            coinCount = coin
+            break
+        } else if (changes[coin] > n) {
+            coinCount = coin -1
+            break
+        } else {
+            coinCount = 4
+        }
+    }
+    while (coinCount >= 0) {
+        let i = 1
+        innerLoop:
+        while (true) {
+            if (changes[coinCount] * i > (n - finalSum)) {
+                finalCount += i - 1
+                finalSum += changes[coinCount] * (i - 1)
+                break innerLoop
+            } else if (changes[coinCount] * i == (n - finalSum)) {
+                finalCount += i
+                finalSum += changes[coinCount] * i
+                break innerLoop
+            }
+            i++
+        }
+        coinCount--
+        if (finalSum == n) {
+            return finalCount
+        }
+    }
+}
+//PASSED
+// console.log(changeCoins(8))
