@@ -128,3 +128,38 @@ function myFunction(a) {
 function myFunction(a) {
     return a.slice(3)
 }
+
+// Write a function that takes two numbers (a and b) as argument
+// Return b percent of a
+function myFunction(a, b) {
+    return a * b/100
+}
+
+// Write a function that takes an array (a) as argument
+// Extract the last 3 elements of 'a'
+// Return the resulting array
+function myFunction(a) {
+    return a.slice(-3)
+}
+
+// Write a function that takes two numbers (a and b) as arguments
+// If a is smaller than b, divide a by b
+// Otherwise, multiply both numbers
+// Return the resulting value
+function myFunction(a, b) {
+    if (a < b) {
+        return a / b
+    }
+    return a * b
+}
+// Another best solution
+function myFunction(a, b) {
+    return a < b ? a /b : a * b
+}
+
+// Write a function that takes a Set and a value as arguments
+// Check if the value is present in the Set
+function myFunction(Set, a) {
+    return a in Set
+} // Wrong Answer
+//TODO: Learn set in JavaSript

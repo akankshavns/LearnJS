@@ -138,7 +138,7 @@
     }
     return mergedArr
 }
-//Incomplete
+//TODO: Incomplete
 // console.log(merge([1, 3, 6, 8], [2, 3, 4, 7]))
 
 /**
@@ -165,7 +165,6 @@
                     break third
                 }
             }
-
         }
         return finalNum
     }
