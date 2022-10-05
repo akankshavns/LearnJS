@@ -225,3 +225,39 @@
 }
 //PASSED
 // console.log(changeCoins(8))
+
+/**
+ * Solution 7
+ *
+ * @param {string[]} script The list of commands.
+ * @returns {string[]} The list of string outputs per command.
+ */
+ function run (script) {
+    let db = {}
+    let outputs = []
+    for (rawCount in script) {
+        let rawScript = script[rawCount]
+        let splitScript = rawScript.split(' ')
+        if (splitScript.length >= 3) {
+            if (splitScript[0] !== 'SET' || splitScript[0] === 'GET' || !splitScript[1].match(/^[a-zA-Z0-9]+$/g)) {
+                outputs.push('ERROR')
+                continue
+            }
+            if (!db[splitScript[1]]) {
+                db[splitScript[1]] = splitScript.slice(2,splitScript.length).join(' ')
+                outputs.push('CREATED')
+            } else if (db[splitScript[1]] !== splitScript[2]) {
+                db[splitScript[1]] = splitScript.slice(2,splitScript.length).join(' ')
+                outputs.push('UPDATED')
+            } else { outputs.push('UNCHANGED') }
+        } else if (splitScript.length === 2 && splitScript[0] == 'GET') {
+            db[splitScript[1]] ? outputs.push('VALUE='+db[splitScript[1]]) : outputs.push('NOT FOUND')
+        } else {
+            outputs.push('ERROR')
+            continue
+        } 
+    }
+    return outputs
+}
+//Failed
+// console.log(run([ "invalid command"]))

@@ -87,3 +87,49 @@
 ### Output
 
 > 3
+
+# 7. Database Shell
+
+> We are going to implement a very simple string-based, key-value database, whose only interface is string commands. There are only two commands: SET and GET.
+>
+> SET <key> <value>: It sets the value of a record. key is a case-sensitive, alphanumeric (no spaces or special letters) string. value is the rest of the string after key and can include any characters, or even be an empty string. The output of this command is CREATED if that key did not exist in the database, UNCHANGED if the key existed but contained the same value, or UPDATED if it had a different value.
+>
+> GET <key>: This command returns the value stored in the database in the format of VALUE=<value>, or simply outputs NOT FOUND if the key does not exist.
+>
+> If an invalid key is used, or the command does not exist, the output should be ERROR. See the sample input/output below for an example.
+
+## Sample Input/Output
+
+### Input
+
+> run([
+  "invalid command",
+  "set key1 val1",
+  "SET key_1 val1",
+  "SET key1 val1",
+  "GET key1 extra_stuff",
+  "SET key1 val2",
+  "SET key1 val2",
+  "GET key1",
+  "GET key2",
+  "SET key2 val1 val2_=_val3",
+  "GET key2",
+  "GET key1"
+]);
+
+### Output
+
+> [
+  "ERROR",
+  "ERROR",
+  "ERROR",
+  "CREATED",
+  "ERROR",
+  "UPDATED",
+  "UNCHANGED",
+  "VALUE=val2",
+  "NOT FOUND",
+  "CREATED",
+  "VALUE=val1 val2_=_val3",
+  "VALUE=val2"
+]
