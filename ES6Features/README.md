@@ -1,6 +1,6 @@
 `Reference:` [TutorialRepublic](https://www.tutorialrepublic.com/javascript-tutorial/javascript-es6-features.php), [Wikipedia](https://en.wikipedia.org/wiki/Ecma_International), 
 
-# ES6 Features
+# ES6
 
 ES6 stands for ECMAScript 6.
 
@@ -14,7 +14,7 @@ ECMAScript is a JavaScript standard intended to ensure the interoperability of w
 
 Ecma aims to develop standards and technical reports to facilitate and standardize the use of information communication technology and consumer electronics; encourage the correct use of standards by influencing the environment in which they are applied; and publish these standards and reports in electronic and printed form
 
-# ES6 Feature
+# ES6 Features
 
 ## 1. The let Keyword
 ES6 introduces the new let keyword for declaring variables. Prior to ES6, the only way to declare a variable in JavaScript was the var keyword. Let's see what's the difference between them is.
