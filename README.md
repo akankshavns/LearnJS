@@ -1,8 +1,5 @@
-# JSHelper
+# LearnJS
 
-### :information_desk_person: Hey there! Welcome to JSHelper Repository!!
+### :information_desk_person: Hey there! Welcome to LearnJS Repository!!
 
-Adding few JavaSript problems and their solutions if the file `JSProblemDocument.js` above.
-
-If want to checkout the website from where I got the problems. Checkout [here](https://javascript.onl/problems/).
-
+Checkout JavaScript Architecture, ES6 Features and more.
