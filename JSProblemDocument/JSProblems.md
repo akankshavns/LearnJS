@@ -133,3 +133,40 @@
   "VALUE=val1 val2_=_val3",
   "VALUE=val2"
 ]
+
+# 8. String Reversal
+> Given a string of characters as input, write a function that returns it with the characters reversed.
+
+# 9. Palindrome
+
+> A palindrome is a word or phrase that reads the same backward as forward. Write a function that checks for this.
+
+# 10. Most Character
+
+> Given a string of characters, return the character that appears the most often.
+
+# 11. Reverse Array
+
+> Given an array of items, reverse the order.
+
+# 12. Prints staircase
+
+> For a given number of steps, print out a “staircase” using hashes and spaces.
+
+```
+describe("Steps", () => {
+ it("Should print steps", () => {
+  assert.equal(steps(3), "#  \n## \n###\n");
+  assert.equal(_steps(3), "#  \n## \n###\n");
+ });
+});
+```
+
+# 13: Max Number in an array
+
+> Find the maximum number in an array of numbers.
+
+# 14. Frequency of number in an array
+
+> Find the frequency of characters inside a string. Return the result as an array of objects. Each object has 2 fields: character and number of occurrences.
+
