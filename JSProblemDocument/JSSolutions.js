@@ -391,3 +391,37 @@ function updateFrequency(ar, chr)
 
     ar.push({ chr : chr, count : 1 });
 }
+
+/**
+ * Solution 15
+ */
+
+var text = "Create a function to return the longest word(s) in a sentance.";
+
+println(getLongestWords(text));
+
+function getLongestWords(text)
+{
+    var words = getWords(text);
+
+    var maxSize = 0;
+    var maxPositions = [];
+
+    for(var i = 0; i < words.length; i++)
+    {
+        var currWordSize = words[i].length;
+
+        if (currWordSize > maxSize)
+        {
+            maxSize = currWordSize;
+            maxPositions = [ i ];
+        }
+        else if (currWordSize === maxSize)
+        {
+            maxPositions.push(i);
+        }
+    }
+
+    return getElements(words, maxPositions);
+}
+

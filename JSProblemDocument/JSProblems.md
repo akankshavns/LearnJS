@@ -170,3 +170,8 @@ describe("Steps", () => {
 
 > Find the frequency of characters inside a string. Return the result as an array of objects. Each object has 2 fields: character and number of occurrences.
 
+# 15. Longest word in a string
+
+> Create a function to return the longest word(s) in a string
+
+
