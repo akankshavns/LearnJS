@@ -21,4 +21,17 @@ See:
 
 
 
-## 
+## Event Module
+
+* How to create and emit an event
+
+## File System Module
+
+* How to create a file
+* How to delete the file
+* How to append the file
+
+## Readline Module
+
+* How to create and close readline interface
+* Attaching event on readline interface
