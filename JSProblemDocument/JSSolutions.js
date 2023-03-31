@@ -255,9 +255,173 @@
         } else {
             outputs.push('ERROR')
             continue
-        } 
+        }
     }
     return outputs
 }
 //Failed
 // console.log(run([ "invalid command"]))
+
+
+/**
+ * Solution 8
+ */
+// M1
+const reverse = string =>
+  string
+    .split("")
+    .reverse()
+    .join("");
+// M2
+const _reverse = string => {
+  let result = "";
+  for (let character of string) result = character + result;
+  return result;
+};
+// M3
+const __reverse = string =>
+  string.split("").reduce((result, character) => character + result);
+
+/**
+ * Solution 9
+ */
+
+/**
+ * Solution 10
+ */
+
+const max = string => {
+  const characters = {};
+
+  for (let character of string)
+    characters[character] = characters[character] + 1 || 1;
+
+  let maxCount = 0;
+  let maxCharacter = null;
+
+  for (let character in characters) {
+    if (characters[character] > maxCount) {
+      maxCount = characters[character];
+      maxCharacter = character;
+    }
+  }
+
+  return maxCharacter;
+};
+
+
+/**
+ * Solution 11
+ */
+
+const reverseArray = array => {
+  for (let i = 0; i < array.length / 2; i++) {
+    const temp = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = temp;
+  }
+  return array;
+};
+
+/**
+ * Solution 12
+ */
+
+const steps = number => {
+  let stairs = "";
+
+  for (let row = 0; row < number; row++) {
+    let stair = "";
+
+    for (let column = 0; column < number; column++)
+      stair += column <= row ? "#" : " ";
+
+    stairs += stair + "\n";
+  }
+
+  return stairs;
+};
+
+/**
+ * Solution 13
+ */
+
+function findMax(ar) {
+    var max = ar[0];
+
+    for(var i = 0; i < ar.length; i++)
+    {
+        if (ar[i] > max)
+        {
+            max = ar[i];
+        }
+    }
+
+    return max;
+}
+
+/**
+ * Solution 14
+ */
+
+var ar = getCharFrequency("Find the frequency of characters inside a string");
+println(JSON.stringify(ar));
+
+function getCharFrequency(text)
+{
+    var ar = [];
+
+    for(var chr of text)
+    {
+        updateFrequency(ar, chr);
+    }
+
+    return ar;
+}
+
+function updateFrequency(ar, chr)
+{
+    for(var el of ar)
+    {
+        if (el.chr === chr)
+        {
+            el.count++;
+        }
+    }
+
+    ar.push({ chr : chr, count : 1 });
+}
+
+/**
+ * Solution 15
+ */
+
+var text = "Create a function to return the longest word(s) in a sentance.";
+
+println(getLongestWords(text));
+
+function getLongestWords(text)
+{
+    var words = getWords(text);
+
+    var maxSize = 0;
+    var maxPositions = [];
+
+    for(var i = 0; i < words.length; i++)
+    {
+        var currWordSize = words[i].length;
+
+        if (currWordSize > maxSize)
+        {
+            maxSize = currWordSize;
+            maxPositions = [ i ];
+        }
+        else if (currWordSize === maxSize)
+        {
+            maxPositions.push(i);
+        }
+    }
+
+    return getElements(words, maxPositions);
+}
+
