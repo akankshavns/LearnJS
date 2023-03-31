@@ -6,4 +6,8 @@ We can use ```module.export``` to expose a funtion outside and use ```require```
 
 See: 
 
+![](c:/Users/Ayush%20Mishra/Desktop/Screenshot_2.png)
+
+
+
 ## 
