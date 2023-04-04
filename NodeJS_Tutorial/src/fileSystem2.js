@@ -40,3 +40,12 @@ fs.unlink('./tutorial/example.txt', (err)=>{
         })
     }
 })
+
+// Reading directory
+
+fs.readdir('./', (err, files) => {
+    if (err) console.log(err)
+    else {
+        console.log(files) //List of the files and directory in the given folder
+    }
+})
