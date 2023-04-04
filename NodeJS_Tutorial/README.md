@@ -30,8 +30,21 @@ See:
 * How to create a file
 * How to delete the file
 * How to append the file
+* How to read directory
 
 ## Readline Module
 
 * How to create and close readline interface
 * Attaching event on readline interface
+
+## Read and Write Stream
+
+* Creating read and write stream
+* Using pip stream
+* Using zlib module to compress and decompress files
+
+## HTTP module
+
+* Creating http server
+* Creating response
+* Sending response
