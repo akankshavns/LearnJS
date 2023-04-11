@@ -15,3 +15,7 @@ Different infos in Package.json file are:
 7. Keywords
 8. Author
 9. License
+10. Dependencies
+
+Variaous packages can be installed using command `npm i <Package Name>`. And can be unistalled with `npm uninstall <Package Name>`
+
